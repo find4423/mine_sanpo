@@ -5,3 +5,15 @@
   <%= link_to'ログイン', new_user_session_path%>
   <%= link_to 'ユーザー登録', new_user_registration_path %>
 <% end %>
+
+<%= link_to "投稿する", new_post_path %>
+
+<div class="contents row">
+  <% @posts.each do |post| %>
+    <div class="content_post" >
+       <%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' %>
+      <p><%= post.text %></p>
+      <%= post.user.nickname %>
+    </div>
+  <% end %>
+</div>
