@@ -1,5 +1,4 @@
 .header_bar{
-  background-color: rgb(10, 118, 75);
   height: 90px;
   display: flex;
   justify-content: space-between;
@@ -9,10 +8,27 @@
 
 a{
   text-decoration: none;
-  color: white;
-  font-size: 20px;
+  color: black;
+}
+
+.minesanpo{
+  font-size: 35px;
+}
+
+span{
+  display: flex;
+  text-align: center;
 }
 
 .post{
  margin: 0 10px; 
+}
+
+.user__info{
+  display: flex;
+  margin: 0 10px;
+}
+
+.username{
+  color: black;
 }

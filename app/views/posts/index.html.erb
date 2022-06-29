@@ -1,14 +1,18 @@
 <%= render "share/header"%>
-<div class="contents row">
+<div class="contents">
   <% @posts.each do |post| %>
     <div class="content_post" >
-       <%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' %>
-      <p><%= post.text %></p>
-      <span class="name">
-        <a href="/users/<%= post.user.id%>">
-          <%= post.user.nickname %>
-        </a>
-      </span>
+      <div class="content_left_box">
+        <div class="content_image"><%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' %></div>
+      </div>
+      <div class="content_right_box">
+        <div class="content_text"><%= post.text %></div>
+        <div class="name">
+          <a href="/users/<%= post.user.id%>">
+            <%= post.user.nickname %>
+          </a>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
