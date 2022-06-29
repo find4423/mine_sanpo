@@ -1,6 +1,7 @@
 <%= %>
 <% if user_signed_in? %>
   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+  <%= link_to current_user.nickname, "/users/#{current_user.id}"%>
 <% else %>
   <%= link_to'ログイン', new_user_session_path%>
   <%= link_to 'ユーザー登録', new_user_registration_path %>
@@ -13,7 +14,11 @@
     <div class="content_post" >
        <%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' %>
       <p><%= post.text %></p>
-      <%= post.user.nickname %>
+      <span class="name">
+        <a href="/users/<%= post.user.id%>">
+          <%= post.user.nickname %>
+        </a>
+      </span>
     </div>
   <% end %>
 </div>
