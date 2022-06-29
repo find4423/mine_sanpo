@@ -12,6 +12,9 @@
             <%= post.user.nickname %>
           </a>
         </div>
+        <% if current_user == post.user %>
+          <div class="post_delete"><%= link_to 'delete', post_path(post.id), method: :delete %></div>
+        <% end %>
       </div>
     </div>
   <% end %>
