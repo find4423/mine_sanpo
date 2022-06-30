@@ -1,27 +1,41 @@
+.username{
+  margin-left: 40px;
+  font-size: 20px;
+}
 .contents{
-  padding: 20px 100px ;
+  padding: 0 100px ;
 }
 
 .content_post{
   display: flex;
   height: 600px;
-  margin: 20px 0;
 }
 
 .content_left_box{
-  width: 600px;
-  background-color: bisque;
+  width: 700px;
   height: 600px;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.content_image{
-  margin: 0 50px;
+.content_image{ 
+  justify-content: center;
 }
 
 .content_right_box{
   justify-content: center;
-  background-color: aqua;
   height: 600px;
+  width: 600px;
   text-align: center;
+  display: flex;
+  align-items: center;
+}
+.content_text{
+  writing-mode: vertical-rl;
+}
+
+.name a{
+  writing-mode: vertical-rl;
+  color: rgba(182, 181, 181, 0.795);
 }

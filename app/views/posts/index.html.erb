@@ -1,4 +1,7 @@
 <%= render "share/header"%>
+<% if user_signed_in? %>
+  <div class="username"><%= "Hi #{current_user.nickname}" %></div>
+<% end %>
 <div class="contents">
   <% @posts.each do |post| %>
     <div class="content_post" >
@@ -13,7 +16,7 @@
           </a>
         </div>
         <% if current_user == post.user %>
-          <div class="post_delete"><%= link_to 'delete', post_path(post.id), method: :delete %></div>
+          <div class="post_delete"><%= link_to ' delete ———', post_path(post.id), method: :delete %></div>
         <% end %>
       </div>
     </div>
