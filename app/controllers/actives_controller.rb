@@ -1,12 +1,9 @@
 class ActivesController < ApplicationController
 
-  def new
-    Active.new
-  end
-
   def create
     Active.create(active_params)
-    redirect_to root_path
+    redirect_to user_path(current_user.id)
+    # showにもどるようにする
   end
 
   private
