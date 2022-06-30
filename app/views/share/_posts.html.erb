@@ -1,0 +1,20 @@
+<div class="contents">
+  <% @posts.each do |post| %>
+    <div class="content_post" >
+      <div class="content_left_box">
+        <div class="content_image"><%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' %></div>
+      </div>
+      <div class="content_right_box">
+        <div class="content_text"><%= post.text %></div>
+        <div class="name">
+          <a href="/users/<%= post.user.id%>">
+            <%= post.user.nickname %>
+          </a>
+        </div>
+        <% if current_user == post.user %>
+          <div class="post_delete"><%= link_to ' delete ———', post_path(post.id), method: :delete %></div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
