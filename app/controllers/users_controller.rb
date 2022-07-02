@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @posts = @user.posts
     @steps = Active.where(user_id: current_user.id).group(:user_id).sum(:step)
   end
-
+  
   def followings
     user = User.find(params[:id])
     @users = user.followings

@@ -25,7 +25,9 @@
   <p><%= @user.nickname %></p>
 
   <%# 歩数カウント %>
+  <div id="step-sum">
   <%= @steps.values.sum %>
+  </div>
   <%# ////////// %>
   
   <%# フォロワー、フォロー数 %>
@@ -34,12 +36,12 @@
 
     <% if @user == current_user %>
       <div class="active-form">
-        <%= form_with url:actives_path, local: true do |f| %>
+        <%= form_with url:actives_path, id:"step-form", local: true do |f| %>
         <div class="form-step">
           <%= f.text_field :step, class:"step-input", id:"active-step" %>
         </div>
         <div class="form-submit">
-          <%= f.submit "歩数を記録", class:"form-btn"%>
+          <%= f.submit "歩数を記録", class:"form-btn", id: "step-submit"%>
         </div>
         <% end %>
       </div>

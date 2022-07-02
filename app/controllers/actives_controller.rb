@@ -1,9 +1,8 @@
 class ActivesController < ApplicationController
 
   def create
-    Active.create(active_params)
-    redirect_to user_path(current_user.id)
-    # showにもどるようにする
+    step = Active.create(active_params)
+    render json:{ step: step }
   end
 
   private
