@@ -1,5 +1,11 @@
 <%= render "share/header"%>
-  <% if user_signed_in? %>
-    <div class="username"><%= "Hi #{current_user.nickname}" %></div>
-  <% end %>
-<%= render "share/posts"%>
+  <div class="index-body">
+    <% if user_signed_in? %>
+      <div class="username"><%= "Hi #{current_user.nickname}" %></div>
+    <% else %>
+      <div class="username">welcome</div>
+    <% end %>
+
+    <%= render "share/posts"%>
+
+  </div>

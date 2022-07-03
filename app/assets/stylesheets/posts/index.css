@@ -1,41 +1,58 @@
-.username{
-  margin-left: 40px;
-  font-size: 20px;
+.index-body{
+  background-color: #ede8e4;
+  height: calc(100vh - 90px);
+  padding: 30px 115px 0;
 }
-.contents{
-  padding: 0 100px ;
+
+.username{
+  margin-top: 20px 0;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+.contents{    
+  width: 1200px;
+  padding: 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .content_post{
   display: flex;
-  height: 600px;
+  background-color: white;
+  border: none, solid;
+  border-radius: 5px;
 }
 
 .content_left_box{
-  width: 700px;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 350px;
 }
 
-.content_image{ 
-  justify-content: center;
+.post-image{
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 5px 0 0 5px;
+}
+
+.post-delete a{
+  padding-top:10px;
+  color: black;
+  writing-mode: vertical-rl;
 }
 
 .content_right_box{
-  justify-content: center;
-  height: 600px;
-  width: 600px;
-  text-align: center;
-  display: flex;
-  align-items: center;
+  padding: 0 1px;
 }
 .content_text{
+  margin-top: 10px;
   writing-mode: vertical-rl;
 }
 
 .name a{
   writing-mode: vertical-rl;
-  color: rgba(182, 181, 181, 0.795);
+  color: #f5a145;
+  margin-top: 10px;
 }
+

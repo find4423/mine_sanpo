@@ -1,0 +1,16 @@
+.show-body{
+  background-color: #ede8e4;
+  height: calc(100vh - 90px);
+  padding: 0 115px;
+}
+
+.show-text{
+  display: flex;
+}
+.user-name{
+  color: white;
+}
+
+.steps{
+  color: white;
+}

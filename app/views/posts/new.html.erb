@@ -1,16 +1,41 @@
-<div class="form_contents ">
-  <div class="container">
-    <h3>Post</h3>
-    <%= form_with(model: @post, local: true) do |form| %>
-    <div class="form_image">
-      <%= form.file_field :image, placeholder: "Image" %>
+<header class="header">
+      <div class="header_bar">
+        <h1 class="grid-6"><a href="/"><div class="minesanpo">Minesanpo</div></a></h1>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <span>
+              <ul class="user__info">
+                <li>
+                  <%= link_to "Mine", "/users/#{current_user.id}" %>
+                </li>
+                <li>
+                  <%= link_to "zzz...", destroy_user_session_path, method: :delete %>
+                </li>
+              </ul>
+            </span>
+          </div>
+        <% end %>
+      </div>
+</header>
+<body>
+  <div class="new-post-body">
+    <div class="form-contents ">
+      <h3>POST</h3>
+      <div class="container">  
+        <%= form_with(model: @post, local: true) do |form| %>
+        <label >
+          <div class="form-image">
+            <%= form.file_field :image %>
+          </div>
+        </label>
+        <div class="form-text">
+          <%= form.text_field :text, placeholder: "text", rows: "1" %>
+        </div>
+        <div class="form-submit">
+          <%= form.submit "SEND" %>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <div class="form_text">
-      <%= form.text_field :text, placeholder: "text", rows: "1" %>
-    </div>
-    <div class="form_submit">
-      <%= form.submit "SEND" %>
-    </div>
-    <% end %>
   </div>
-</div>
+</body>
