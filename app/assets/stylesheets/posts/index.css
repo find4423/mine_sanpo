@@ -1,11 +1,11 @@
 .index-body{
   background-color: #ede8e4;
-  height: calc(100vh - 90px);
+
   padding: 30px 115px 0;
 }
 
 .username{
-  margin-top: 20px 0;
+  margin-top: 20px ;
   font-size: 20px;
   color: white;
   display: block;
@@ -16,13 +16,16 @@
   padding: 20px 0 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .content_post{
+  margin-bottom: 50px ;
   display: flex;
   background-color: white;
   border: none, solid;
   border-radius: 5px;
+  
 }
 
 .content_left_box{
