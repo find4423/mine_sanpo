@@ -1,7 +1,7 @@
 .index-body{
   background-color: #ede8e4;
-
   padding: 30px 115px 0;
+  height: 100%;
 }
 
 .username{
@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
 }
 
 .content_post{

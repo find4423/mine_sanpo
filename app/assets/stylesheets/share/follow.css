@@ -1,0 +1,35 @@
+.follow-body{
+  background-color: #ede8e4;
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow-box{
+  width: 370px;
+}
+
+.follow-text{
+  color: #f5a145;
+  font-size: 20px;
+}
+
+.follow-column{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.follow-btn{
+  font-size: 13px;
+  margin-top: 10px;
+  background-color: #329679;
+  border: none;
+  height: 30px;
+  width: 100px;
+  color: white;
+  border-radius: 10px;
+}
+
