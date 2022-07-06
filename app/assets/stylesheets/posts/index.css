@@ -1,7 +1,7 @@
 .index-body{
   background-color: #ede8e4;
-  padding: 30px 115px 0;
-  height: 100%;
+  padding: 0 115px ;
+  height: 100vh;
 }
 
 .username{
@@ -12,11 +12,10 @@
 
 .contents{    
   width: 1200px;
-  padding: 20px 0 20px;
+  margin: 20px 0 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .content_post{
