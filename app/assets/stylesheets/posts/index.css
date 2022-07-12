@@ -1,17 +1,20 @@
 .index-body{
   background-color: #ede8e4;
-  padding: 0 115px ;
-  height: 100vh;
+  padding: 20px 115px 20px;
+
 }
 
 .username{
   font-size: 20px;
   color: #f5a145;
   display: block;
+
 }
 
-.contents{    
-  width: 1200px;
+.contents{
+  background-color: antiquewhite;
+  height: 100%;
+  width: 85vw;
   margin: 20px 0 20px;
   display: flex;
   justify-content: space-between;
@@ -19,16 +22,13 @@
 }
 
 .content_post{
+  height: 350px;
   margin-bottom: 50px ;
   display: flex;
   background-color: white;
   border: none, solid;
   border-radius: 5px;
   
-}
-
-.content_left_box{
-  height: 350px;
 }
 
 .post-image{
