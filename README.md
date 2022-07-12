@@ -9,6 +9,7 @@
 
 ### association 
 - has_many :posts
+- has_many :steps
 - has_many :follow
 - has_many :follow
 
@@ -30,3 +31,12 @@
 ### association 
 - belongs_to :following, class_name :'User'
 - belongs_to :follower, class_name :'User'
+
+## actives table
+|Column|Type|Options|
+|------|----|-------|
+|step|integer|---|
+|user|reference|null: false, foreign_key: true|
+
+### association
+- belongs_to :user
