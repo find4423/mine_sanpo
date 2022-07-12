@@ -2,7 +2,7 @@ class ActivesController < ApplicationController
 
   def create
     step = Active.create(active_params)
-    render 
+    redirect_to "/users/#{current_user.id}"
   end
 
   private
