@@ -1,6 +1,6 @@
 .index-body{
   background-color: #ede8e4;
-  padding: 20px 115px 20px;
+  padding: 20px 115px ;
 
 }
 
@@ -8,11 +8,10 @@
   font-size: 20px;
   color: #f5a145;
   display: block;
-
+  margin:15px 0;
 }
 
 .contents{
-  background-color: antiquewhite;
   height: 100%;
   width: 85vw;
   margin: 20px 0 20px;
@@ -28,7 +27,6 @@
   background-color: white;
   border: none, solid;
   border-radius: 5px;
-  
 }
 
 .post-image{
@@ -58,3 +56,13 @@
   margin-top: 10px;
 }
 
+.content_left_box_dummy{
+  height: 350px;
+  width: 350px;
+  background-color: #ede8e4;
+}
+
+.content_right_box_dummy{
+  width: 26px;
+  background-color: #ede8e4;
+}
