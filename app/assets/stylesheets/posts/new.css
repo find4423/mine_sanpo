@@ -1,21 +1,37 @@
 
-.form-image input{
-  margin: 10px 0;
-}
-
-.form-text input{
-  margin: 10px 0;
-}
-
 .form-submit input{
   font-size: 17px;
-  margin-top: 10px;
+  margin: 50px 40px;
   background-color: #329679;
   border: none;
   height: 30px;
   width: 120px;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.post-container{
+  height: 300px;
+  padding: 50px 0;
+  justify-content: center;
+  display: flex;
+
 }
 
 
+#image { 
+  display: none;
+}
+
+.button {
+  margin: 0 auto 50px;
+  width: 150px;
+  justify-content: center;
+  line-height: 30px;
+  font-size: 17px;
+  background-color: #329679;
+  border: none;
+  height: 30px;
+  color: white;
+  border-radius: 5px;
+}

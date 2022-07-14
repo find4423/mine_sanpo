@@ -1,8 +1,8 @@
 <header class="header">
       <div class="header_bar">
         <h1 class="grid-6"><a href="/"><div class="minesanpo">Minesanpo</div></a></h1>
-        <% if user_signed_in? %>
           <div class="user_nav grid-6">
+        <% if user_signed_in? %>
             <span>
               <ul class="user__info">
                 <li>
@@ -21,20 +21,19 @@
   <div class="form-body">
     <div class="form-contents">
       <h3>POST</h3>
-      <div class="container">  
+      <div class="post-container">  
         <%= form_with(model: @post, local: true) do |form| %>
-        <label >
-          <div class="form-image">
-            <%= form.file_field :image %>
-          </div>
+        <label for="image">
+          <span class="button">画像を選択</span><%= form.file_field :image, id: "image" %>
         </label>
-        <div class="form-text">
-          <%= form.text_field :text, placeholder: "text", rows: "1" %>
+        <div class="field" >
+          <%= form.text_field :text, placeholder: "text"%>
         </div>
         <div class="form-submit">
           <%= form.submit "SEND" %>
         </div>
         <% end %>
+      </div>
       </div>
     </div>
   </div>

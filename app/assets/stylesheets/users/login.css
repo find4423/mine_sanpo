@@ -1,14 +1,9 @@
-.new-user-container{
+.login-container{
   justify-content: center;
   display: flex;
-  padding: 20px 0;
+  padding: 40px 0;
 }
-
-.new-user-submit {
-  margin: 30px 40px 0;
-}
-
-.new-user-submit input{
+.login-submit input{
   font-size: 17px;
   background-color: #329679;
   border: none;
@@ -16,4 +11,8 @@
   width: 120px;
   color: white;
   border-radius: 5px;
+}
+
+.login-submit{
+  margin: 60px 45px 0;
 }

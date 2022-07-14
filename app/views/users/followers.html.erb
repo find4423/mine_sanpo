@@ -2,25 +2,33 @@
 <%= render "share/header"%>
 
 <div class="follow-body">
-  <div class="follow-contents">
-    <div class="">
-      <div class="follow-text">FOLLOWERS</div>
-          <% @users.each do |user| %>
-                <%= link_to user_path(user) do %>
-                  <%= user.nickname %>
-                <% end %>
-                <% if user != current_user %>
-                  <% if user.is_followed_by?(current_user) %>
-                    <%=link_to user_relationships_path(user), method: :delete do %>
-                      <button type="button" class="btn btn btn-danger">フォロー解除</button>
-                    <% end %>
-                  <% else %>
-                    <%=link_to user_relationships_path(user), method: :post do %>
-                      <button type="button" class="btn btn btn-primary">フォロー</button>
-                    <% end %>
-                  <% end %>
-                <% end %>
+  <div class="follow-box">
+    <div class="follow-header">
+      <h3>FOLLOWERS</h3>
+    </div>
+    <div class="follow-column">
+        <% @users.each do |user| %>
+          <div class="follow-name">
+          <%= link_to user_path(user) do %>
+            <%= user.nickname %>
           <% end %>
+          </div>
+          <% if user != current_user %>
+          <div class="follow-btn-box">
+            <% if user.is_followed_by?(current_user) %>
+              <%=link_to user_relationships_path(user), method: :delete do %>
+                <button type="button" class="follow-btn">フォロー中</button>
+              <% end %>
+            <% else %>
+            </div>
+                  <div class="follow-btn-box">
+              <%=link_to user_relationships_path(user), method: :post do %>
+                <button type="button" class="follow-btn">フォロー</button>
+            <% end %>
+          <% end %>
+          </div>
+          <% end %>
+        <% end %>
     </div>
   </div>
 </div>

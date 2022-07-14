@@ -1,16 +1,61 @@
 .show-body{
 
   background-color: #ede8e4;
-  padding: 20px 115px;
+  padding: 40px 115px;
 }
 
-.show-text{
+.user-info{
+  height: 200px;
   display: flex;
+  margin-bottom: 40px;
+}
+
+.green{
+  width: 26px;
+  border-radius: 5px 0 0 5px;
+  background-color: #329679;
+}
+
+.show-contents{
+  width: 350px;
+  border-radius: 0 5px 5px 0;
+  background-color:white;
+  padding: 10px 20px;
 }
 .user-name{
-  color: white;
+  color: #f5a145;
+  font-size: 25px;
+}
+
+.follow-count a{
+  margin: 5px 0;
+  font-size: 15px;
+  color: black;
 }
 
 .steps{
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+#active-step{
+  width: 90px;
+}
+
+.btn-space{
+  padding: 20px 0;
+}
+
+.form-step{
+  margin: 10px 0 ;
+}
+
+.step-submit input{
+  font-size: 15px;
+  background-color: #329679;
+  border: none;
+  height: 30px;
+  width: 100px;
   color: white;
+  border-radius: 5px;
 }

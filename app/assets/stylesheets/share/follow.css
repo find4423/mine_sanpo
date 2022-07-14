@@ -7,29 +7,30 @@
 }
 
 .follow-box{
-  width: 370px;
-}
-
-.follow-text{
-  color: #f5a145;
-  font-size: 20px;
+  width: 400px;
 }
 
 .follow-column{
-  width: 300px;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  padding: 15px 60px;
+}
+
+.follow-name a{
+  color: #f5a145;
+  font-size: 20px;
+  margin-left: 20px ;
 }
 
 .follow-btn{
-  font-size: 13px;
-  margin-top: 10px;
+  font-size: 15px;
   background-color: #329679;
   border: none;
   height: 30px;
   width: 100px;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 

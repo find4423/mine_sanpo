@@ -1,43 +1,21 @@
-<header class="header">
-      <div class="header_bar">
-        <h1 class="grid-6"><a href="/"><div class="minesanpo">Minesanpo</div></a></h1>
-        <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <span>
-              <ul class="user__info">
-                <li>
-                  <%= link_to "zzz...", destroy_user_session_path, method: :delete %>
-                </li>
-                <li>
-                  <%= link_to "Post", new_post_path %>
-                </li>
-              </ul>
-              
-            </span>
-              
-          </div>
-        <% else %>
-          <div class="grid-6">
-            <%= link_to "Login", new_user_session_path, class: "post" %>
-            <%= link_to "Newuser", new_user_registration_path, class: "post" %>
-          </div>
-        <% end %>
-      </div>
-</header>
-
-<%# /header %>
+<%= render "share/header"%>
 
 <body>
   <div class="show-body">
-    <div class="show-text">
+    <div class="user-info">
+    <div class="green"></div>
+    <div class="show-contents">
       <div class="user-name"><%= @user.nickname %></div>
-      <%# 歩数カウント %>
-      <div class="steps"><%= @steps.values.sum %></div>
-      <%#/歩数カウント %>
-  </div>
+
       <%# フォロワー、フォロー数 %>
-        <p><%= link_to "#{@user.followings.count}フォロー", followings_user_path(@user) %> <%= link_to "#{@user.followers.count}フォロワー", followers_user_path(@user)%></p>
+      <div class="follow-count"><%= link_to "#{@user.followings.count}フォロー", followings_user_path(@user)%> <%= link_to "#{@user.followers.count}フォロワー", followers_user_path(@user)%></div>
       <%# /フォロワー、フォロー数%>
+
+      <%# 歩数カウント %>
+      <div class="steps"><%= @steps.values.sum %>steps</div>
+      <%#/歩数カウント %>
+  
+
 
       <% if @user == current_user %>
         <div class="active-form">
@@ -45,12 +23,13 @@
           <div class="form-step">
             <%= f.text_field :step, class:"step-input", id:"active-step", placeholder:"step" %>
           </div>
-          <div class="form-submit">
+          <div class="step-submit">
             <%= f.submit "歩数を記録", class:"form-btn" %>
           </div>
           <% end %>
         </div>
       <% else %>
+        <div class="btn-space">
         <% if @user.is_followed_by?(current_user) %>
           <%= link_to user_relationships_path(@user), method: :delete do %>
             <p><button class="follow-btn">フォロー中</button></p>
@@ -60,7 +39,10 @@
             <p><button class="follow-btn">フォロー</button></p>
           <% end %>
         <% end %>
+        </div>
       <% end %>
+      </div>
+      </div>
       <%= render "share/posts"%>
   </div> 
 <body> 

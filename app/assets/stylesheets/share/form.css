@@ -7,11 +7,15 @@
 }
 
 .form-contents{
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  width: 400px;
   background-color: white;
   border-radius: 5px;
-  text-align: center;
+}
+
+.field{
+  margin-bottom: 10px;
+  width: 200px;
 }
 
 h3{
@@ -21,5 +25,20 @@ h3{
   line-height: 35px;
   font-size: 20px;
   color: white;
-  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"]{
+  width: 200px;
+}
+
+input[type="file"]{
+  width: 200px;
+}
+
+input[type="password"]{
+  width: 200px;
+}
+input[type="email"]{
+  width: 200px;
 }

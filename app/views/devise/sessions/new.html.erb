@@ -1,7 +1,8 @@
 <%= render "share/header"%>
 <div class="form-body">
   <div class="form-contents">
-    <h3>SIGNUP</h3>
+    <h3>LOGIN</h3>
+    <div class="login-container">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
@@ -20,10 +21,11 @@
         </div>
       <% end %>
 
-      <div class="actions">
+      <div class="login-submit">
         <%= f.submit "Log in" %>
       </div>
     <% end %>
+    </div>
   </div>
 </div>
 

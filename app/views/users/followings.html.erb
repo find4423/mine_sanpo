@@ -2,7 +2,9 @@
 
 <div class="follow-body">
   <div class="follow-box">
-    <div class="follow-text">FOLLOWING</div>
+    <div class="follow-header">
+      <h3>FOLLOWING</h3>
+    </div>
     <div class="follow-column">
         <% @users.each do |user| %>
           <div class="follow-name">
@@ -15,7 +17,7 @@
           <div class="follow-btn-box">
             <% if user.is_followed_by?(current_user) %>
               <%=link_to user_relationships_path(user), method: :delete do %>
-                <button type="button" class="follow-btn">フォロー解除</button>
+                <button type="button" class="follow-btn">フォロー中</button>
               <% end %>
             <% else %>
             </div>
