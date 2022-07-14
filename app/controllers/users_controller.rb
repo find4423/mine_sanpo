@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
-    @steps = Active.where(user_id: current_user.id).group(:user_id).sum(:step)
+    @steps = Active.where(user_id: @user.id).group(:user_id).sum(:step)
   end
   
   def followings
