@@ -1,4 +1,23 @@
+<%= render "share/header"%>
 
-<% @actives.each do |active| %>
-<%= active.step %>
-<% end %>
+<div class="actives-body">
+
+  <%= render "share/user_info"%>
+
+  <div class="actives-contents">
+    <% @actives.each do |active| %>
+    <div class="active-box">
+      <div class="active-green"></div>
+      <div class="active-info">
+        <div class="active-date">
+          <%= active.created_at.strftime('%Y/%m/%d')%>
+        </div>
+        <div class="active-step">
+          <%= "#{active.step} step" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="user-info">
+    <div class="green"></div>
+    <div class="show-contents">
+      <div class="user-name"><%= @user.nickname %></div>
+
+      <%# フォロワー、フォロー数 %>
+      <div class="follow-count"><%= link_to "#{@user.followings.count}フォロー", followings_user_path(@user)%> <%= link_to "#{@user.followers.count}フォロワー", followers_user_path(@user)%></div>
+      <%# /フォロワー、フォロー数%>
+
+      <%# 歩数カウント %>
+      <div class="steps"><%= link_to "#{@steps.values.sum } step", active_path(@user) %></div>
+      <%#/歩数カウント %>
+  
+
+
+      <% if @user == current_user %>
+        <div class="active-form">
+          <%= form_with url:actives_path, local: true do |f| %>
+          <div class="form-step">
+            <%= f.text_field :step, class:"step-input", id:"active-step", placeholder:"step" %>
+          </div>
+          <div class="step-submit">
+            <%= f.submit "歩数を記録", class:"form-btn" %>
+          </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="btn-space">
+        <% if @user.is_followed_by?(current_user) %>
+          <%= link_to user_relationships_path(@user), method: :delete do %>
+            <p><button class="follow-btn">フォロー中</button></p>
+          <% end %>
+        <% else %>
+          <%= link_to user_relationships_path(@user), method: :post do %>
+            <p><button class="follow-btn">フォロー</button></p>
+          <% end %>
+        <% end %>
+        </div>
+      <% end %>
+      </div>
+      </div>

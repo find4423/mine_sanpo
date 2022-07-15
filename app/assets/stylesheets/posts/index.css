@@ -4,16 +4,16 @@
   padding: 20px 115px ;
 }
 .username{
-  font-size: 20px;
+  font-size: 30px;
   color: #f5a145;
   display: block;
-  margin:15px 0;
+  margin:25px 0;
 }
 
 .contents{
   height: 100%;
   width: 85vw;
-  margin: 20px 0 20px;
+  margin: 60px 0 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
