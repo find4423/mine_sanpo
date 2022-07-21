@@ -1,5 +1,6 @@
 # README
-
+#mine_sanpo
+URL: https://mine-sanpo.herokuapp.com/
 ## users table
 |Column|Type|Options|
 |------|----|-------|
