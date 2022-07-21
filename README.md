@@ -23,7 +23,7 @@ PASS:0113
 まだ、未実装であるがゲーム的要素を取り入れることで参入しやすくしていく予定。
 
 ## 要件定義
-[要件定義のスプレットシート] https://docs.google.com/spreadsheets/d/1GhmgjHPcO_fbAHJPb_TEfYqrB5owMXZHWTDQNK9EAK0/edit?usp=sharing
+[要件定義のスプレットシート](https://docs.google.com/spreadsheets/d/1GhmgjHPcO_fbAHJPb_TEfYqrB5owMXZHWTDQNK9EAK0/edit?usp=sharing)
 
 ### users table
 |Column|Type|Options|
