@@ -4,7 +4,7 @@
   padding: 20px 115px ;
 }
 .username{
-  font-size: 30px;
+  font-size: 25px;
   color: #f5a145;
   display: block;
 }
@@ -51,15 +51,4 @@
   writing-mode: vertical-rl;
   color: #f5a145;
   margin-top: 10px;
-}
-
-.content_left_box_dummy{
-  height: 350px;
-  width: 350px;
-  background-color: #ede8e4;
-}
-
-.content_right_box_dummy{
-  width: 26px;
-  background-color: #ede8e4;
 }
