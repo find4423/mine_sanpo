@@ -11,8 +11,21 @@ class ActivesController < ApplicationController
     redirect_to "/actives/#{current_user.id}"
   end
 
+  def destroy
+    step = Active.find(params[:id]) 
+    step.destroy
+    redirect_to active_path(current_user.id)
+  end
+
   private
   def active_params
     params.permit(:step).merge(user_id: current_user.id)
+  end
+
+  def action_destroy
+    step = Active.find(params[:id])
+    unless user_signed_in? && current_user.id == step.user_id
+      redirect_to root_path
+    end
   end
 end

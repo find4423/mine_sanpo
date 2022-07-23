@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   
   resources :posts
   resources :users, only: :show
-  resources :actives, only: [:show, :new, :create]
+  resources :actives, only: [:show, :new, :create, :destroy]
 
 end
