@@ -1,6 +1,5 @@
 .follow-body{
-  background-color: #ede8e4;
-  height: calc(100vh - 90px);
+  height: calc(100% - 90px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +10,7 @@
 }
 
 .follow-column{
+  height: 100%;
   background-color: white;
   border-radius: 0 0 5px 5px;
   display: flex;
