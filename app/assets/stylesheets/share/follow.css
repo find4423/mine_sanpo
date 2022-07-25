@@ -9,11 +9,15 @@
   width: 400px;
 }
 
+.follow-flex{
+  display: flex;
+}
+
 .follow-column{
   height: 100%;
   background-color: white;
   border-radius: 0 0 5px 5px;
-  display: flex;
+
   justify-content: space-between;
   padding: 15px 60px;
 }
