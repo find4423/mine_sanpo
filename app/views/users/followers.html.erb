@@ -7,12 +7,19 @@
       <h3>FOLLOWERS</h3>
     </div>
     <div class="follow-column">
-        <% @users.each do |user| %>
+
+      <% @users.each do |user| %>
+      <div class="follow-flex">
+
+        <div class="center-box">
           <div class="follow-name">
-          <%= link_to user_path(user) do %>
-            <%= user.nickname %>
-          <% end %>
+            <%= link_to user_path(user) do %>
+              <%= user.nickname %>
+            <% end %>
           </div>
+        </div>
+
+        <div class="center-box">
           <% if user != current_user %>
           <div class="follow-btn-box">
             <% if user.is_followed_by?(current_user) %>
@@ -20,15 +27,18 @@
                 <button type="button" class="follow-btn">フォロー中</button>
               <% end %>
             <% else %>
-            </div>
-                  <div class="follow-btn-box">
+          </div>
+          <div class="follow-btn-box">
               <%=link_to user_relationships_path(user), method: :post do %>
                 <button type="button" class="follow-btn">フォロー</button>
+              <% end %>
             <% end %>
-          <% end %>
           </div>
           <% end %>
-        <% end %>
+        </div>
+      </div>
+      <% end %>
+
     </div>
   </div>
 </div>
