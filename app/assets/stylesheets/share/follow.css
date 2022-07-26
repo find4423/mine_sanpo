@@ -11,21 +11,25 @@
 
 .follow-flex{
   display: flex;
+  margin-bottom: 10px;
 }
 
 .follow-column{
   height: 100%;
+  padding: 17px 10px;
   background-color: white;
   border-radius: 0 0 5px 5px;
+}
 
-  justify-content: space-between;
-  padding: 15px 60px;
+.center-box{
+  width: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .follow-name a{
   color: #f5a145;
   font-size: 20px;
-  margin-left: 20px ;
 }
 
 .follow-btn{
